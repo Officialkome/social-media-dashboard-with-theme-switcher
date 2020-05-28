@@ -1,176 +1,204 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: bold;
+  box-sizing: border-box;
 }
-/* Layout Styles */
-.page-box{
+
+body{
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  color: hsl(228,12%,44%);
+  width: 100%;
   position: relative;
-  padding: 0;
 }
-.top-bg{
-  background-color: hsl(225, 100%, 98%);
+#top-background{
+  background: hsl(225, 100%, 98%);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
   height: 300px;
 }
-.white-bg{
-  background-color: white;
-  height: auto;
-}
-
-.wrapper{
+/* Overlay Container and Header styles */
+.container{
   position: absolute;
   top: 0;
-  left: 5%;
-  right: 5%;
-  background: transparent;
+  right: 10px;
+  left: 10px;
 }
-.title-box,.profile-summary{
-    padding: 50px 0;
+.header-section div{
+padding-bottom: 30px;
 }
-  /* Title/header and toggle-switch styles */
-.title-logo {
-    float: left;
+.header-section .flex-container{
+  padding-bottom: 100px;
 }
-.toggle-switch {
-    float: right;
+.title-large{
+  padding-top: 20px;
 }
-/* .toggle-text{
-  float: left;
-} */
-.profile-summary{
-  clear: both;
-  text-align: center;
+.title-large p{
+  margin-top: -15px;
 }
-
+/* Toggle switch styles */
+#toggle-container{
+  display: grid;
+  grid-template-columns:repeat(1, 8fr) 1fr;
+  margin-bottom: 20px;
+}
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 25px;
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin-top: 10px;
 }
-  
-.switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
+/* Hide checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
-  
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: hsl(230, 22%, 74%);
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 34px;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 30px;
+  background-color: hsl(230, 22%, 74%);
+  -webkit-transition: .4s;
+  transition: .4s;
 }
-  
 .slider:before {
-    position: absolute;
-    content: "";
-    height: 20px;
-    width: 20px;
-    left: 4px;
-    bottom: 4px;
-    border-radius: 50%;
-    background-color: lightgrey;
-    -webkit-transition: .4s;
-    transition: .4s;
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  top: 2px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
-
-input:checked + .slider{
-    background: linear-gradient(hsl(210, 78%, 56%),hsl(146, 68%, 55%))
+input:checked + .slider {
+  background: linear-gradient(hsl(210, 78%, 56%),hsl(146, 68%, 55%));
 }
 input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
-  
-  /* Social media accounts summary and overview info section styles*/
-
-.overview-one,.overview-two{
-      margin-bottom: 20px;
-}
-/* Border styles for social media accounts summary */
-
-.profile-summary .facebook{
-  border-top: 3px solid hsl(195, 100%, 50%);
-}
-.profile-summary .twitter{
-  border-top: 3px solid hsl(203, 89%, 53%);
-}
-.profile-summary .card,.overview-one .card, .overview-two .card{
-  background-color: hsl(227, 47%, 96%);
-}
-.profile-summary .instagram::before{
-/* Added a empty before pseudo and styled it to get the gradient for the border-top here */
-content: "";
-width: 100%;
-height: 3px;
-background: linear-gradient(to right,hsl(37, 97%, 70%),hsl(329, 70%, 58%));
-} 
-.profile-summary .youtube{
-  border-top: 3px solid hsl(348, 97%, 39%);
+/* Grids, Profile Info and Overview Info styles */
+.inner-grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-  /* Text styles */
-.align-right{
-    text-align: right;
+#profile-section{
+  text-align: center;
+
 }
-.align-left{
-    text-align: left;
+#profile-section div{
+  margin-bottom: 30px;
+  background: hsl(227, 47%, 96%);
+  padding: 10px 0;
+  line-height: 0;
+}
+#profile-section span{
+  margin-right: 7px;
+}
+/* Social media profiles info border styles */
+.facebook-info{
+  border-top: 5px solid hsl(207,91%,52%);
+  border-radius: 5px;
+}
+.twitter-info{
+  border-top: 5px solid hsl(203, 89%, 53%);
+  border-radius: 5px;
+}
+.youtube-info{
+  border-top: 5px solid hsl(348, 97%, 39%);
+  border-radius: 5px;
+}
+/* Instagram profile info gradient border styles*/
+.instagram-info{
+  position: relative;
+}
+.instagram-info::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: linear-gradient(to right,hsl(37, 97%, 70%),hsl(329, 70%, 58%));
+  top:0px;
+  left:0;
+}
+/* Overview Today Info section styles */
+#overview-section div{
+  margin: 30px 0;
+  background: hsl(227, 47%, 96%);
+  padding-left: 10px;
+  padding-right: 5px;
+}
+.social-icon-block{
+  text-align: right;
+}
+.social-icon-block p{
+  margin-bottom: 40px;
 }
 
-.big-text{
-    font-weight: 800;
-    font-size: 3em;
-    color: hsl(230, 17%, 14%);
-}
-  
-.medium-text{
-    font-weight: 800;
-    color: hsl(230, 17%, 14%);
-}
-.spaced-text{
-    letter-spacing: 0.2rem;
-    font-weight: 100;
-}
-.grey-text{
-    color: hsl(228, 12%, 44%);
-}
-.grey-bold-text{
-  /* for overview info text */
-      font-weight: bold;
-      color: hsl(228, 12%, 44%);
+/* Text Styles */
+.dark-blue-text{
+  color: hsl(230, 17%, 14%);
+  font-weight: 700;
 }
 .green-text{
-    color: hsl(163, 72%, 41%);
-    font-size: 10px;
-    padding-top: 5px;
+  color: hsl(163, 72%, 41%);
 }
 .red-text{
-    color: hsl(356, 69%, 56%);
-    font-size: 10px;
-    padding-top: 5px;
+  color: hsl(356, 69%, 56%);
 }
-.small-text{
-    font-size: 10px;
+.big-font{
+  font-size: 4em;
+}
+.medium-font{
+  font-size: 2em;
+}
+.spaced-text{
+  letter-spacing: 5px;
+  margin-top: -15px;
+  padding-bottom: 30px;
+  font-weight: lighter;
 }
 
-  /* Attribution text/link Styles */
-.attribution {
-    font-size: 11px;
-    text-align: center;
-    padding: 10px;
- }
+/* footer/link styles */
+footer { 
+  font-size: 11.2px; 
+  text-align: center; 
+}
+footer a { color: hsl(163, 72%, 41%); }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
+/* Media Queries - desktop styles */
+@media (min-width:700px) and (max-width:1440px){
+  .container{
+    /* margin: 0% auto; */
+    left: 10%;
+    right: 10%;
+  }
+  .header-section, #toggle-container{
+    display: flex;
+    padding-top: 50px;
+  } 
+  .switch{
+    margin-left: 20px;
+  }
+  hr{ 
+    visibility: hidden;
+  }
+  #profile-section,#overview-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 30px;
+  }
 }
