@@ -10,11 +10,14 @@ body{
   width: 100%;
   position: relative;
 }
-#top-background{
-  background: hsl(225, 100%, 98%);
+.header-background{
+  background-color: hsl(225, 100%, 98%);
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   height: 300px;
+}
+.card{
+  background: hsl(227, 47%, 96%);
 }
 /* Overlay Container and Header styles */
 .container{
@@ -26,9 +29,6 @@ body{
 .header-section div{
 padding-bottom: 30px;
 }
-.header-section .flex-container{
-  padding-bottom: 100px;
-}
 .title-large{
   padding-top: 20px;
 }
@@ -36,10 +36,12 @@ padding-bottom: 30px;
   margin-top: -15px;
 }
 /* Toggle switch styles */
-#toggle-container{
-  display: grid;
-  grid-template-columns:repeat(1, 8fr) 1fr;
-  margin-bottom: 20px;
+#toggleContainer{
+  display: flex;
+}
+
+#toggleContainer p{
+  flex: 2;
 }
 .switch {
   position: relative;
@@ -48,11 +50,8 @@ padding-bottom: 30px;
   height: 25px;
   margin-top: 10px;
 }
-/* Hide checkbox */
-.switch input {
+.switch input{
   opacity: 0;
-  width: 0;
-  height: 0;
 }
 .slider {
   position: absolute;
@@ -87,23 +86,18 @@ input:checked + .slider:before {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
-/* Grids, Profile Info and Overview Info styles */
-.inner-grid-container{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
+/* Profile Info and Overview Info styles */
 
-#profile-section{
+.profile-section{
   text-align: center;
 
 }
-#profile-section div{
+.profile-section div{
   margin-bottom: 30px;
-  background: hsl(227, 47%, 96%);
   padding: 10px 0;
   line-height: 0;
 }
-#profile-section span{
+.profile-section span{
   margin-right: 7px;
 }
 /* Social media profiles info border styles */
@@ -135,17 +129,22 @@ input:checked + .slider:before {
   left:0;
 }
 /* Overview Today Info section styles */
-#overview-section div{
-  margin: 30px 0;
-  background: hsl(227, 47%, 96%);
-  padding-left: 10px;
-  padding-right: 5px;
+.inner-grid-container{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  padding-left: 20px;
 }
-.social-icon-block{
-  text-align: right;
+.overview-section div{
+  
+  margin: 20px 3px 20px 3px;
 }
-.social-icon-block p{
-  margin-bottom: 40px;
+.inner-grid-container div{
+  margin-top: 30px;
+}
+
+.stat-block-one > p{
+ padding-bottom: 20px;
 }
 
 /* Text Styles */
@@ -180,25 +179,47 @@ footer {
 footer a { color: hsl(163, 72%, 41%); }
 
 /* Media Queries - desktop styles */
+
 @media (min-width:700px) and (max-width:1440px){
   .container{
-    /* margin: 0% auto; */
     left: 10%;
     right: 10%;
   }
-  .header-section, #toggle-container{
+  .header-section{
     display: flex;
-    padding-top: 50px;
   } 
+  #toggleContainer{
+    padding-top: 50px;
+  }
   .switch{
     margin-left: 20px;
   }
   hr{ 
     visibility: hidden;
   }
-  #profile-section,#overview-section{
+  .profile-section,.overview-section{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 30px;
   }
+}
+
+/* Dark Theme Styles */
+.body-dark-bg{
+  background: hsl(230, 17%, 14%);
+  animation: ease-in;
+  transition: .4s;
+}
+.header-dark-bg{
+  background-color: hsl(232, 19%, 15%);
+  animation: ease-in;
+  transition: .4s;
+}
+.card-dark-bg{
+  background: hsl(228, 28%, 20%);
+  animation: ease-in;
+  transition: .4s;
+}
+.theme-white-text{
+  color: hsl(0, 0%, 100%);
 }

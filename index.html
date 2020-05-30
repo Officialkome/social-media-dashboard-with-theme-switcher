@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="top-background"></div>
+  <div class="header-background"></div>
   <!-- Overlay/ Main section -->
   <div class="container">
       <div class="header-section">
@@ -20,35 +20,35 @@
         </div>
         <hr>
         <!-- toggle switch -->
-        <div id="toggle-container">
+        <div id="toggleContainer">
           <p>Dark Mode</p>
-          <label class="switch" for="toggle-switch">
-            <input type="checkbox" name="toggle" id="toggle-switch">
-            <span class="slider round"></span>
+          <label class="switch" for="toggleSwitch">
+            <input type="checkbox" name="toggle" id="toggleSwitch">
+            <span class="slider"></span>
           </label>
         </div>
       </div>
     <!-- Social Media Profiles Information -->
-    <div id="profile-section">
-      <div class="facebook-info">
+    <div class="profile-section">
+      <div class="facebook-info card">
         <p><span><img src="images/icon-facebook.svg" alt="facebook icon"></span>@komecodes</p>
         <p class="dark-blue-text big-font">1898</p>
         <p class="spaced-text">FOLLOWERS</p>
         <p class="green-text"><span><img src="images/icon-up.svg" alt="up arrow"></span>12 Today</p>
       </div>
-      <div class="twitter-info">
+      <div class="twitter-info card">
         <p><span><img src="images/icon-twitter.svg" alt="twitter icon"></span>@komecodes</p>
         <p class="dark-blue-text big-font">3337</p>
         <p class="spaced-text">FOLLOWERS</p>
         <p class="green-text"><span><img src="images/icon-up.svg" alt="up arrow"></span>100 Today</p>
       </div>
-      <div class="instagram-info">
+      <div class="instagram-info card">
         <p><span><img src="images/icon-instagram.svg" alt="instagram icon"></span>@officialkome</p>
         <p class="dark-blue-text big-font">1k&plus;</p>
         <p class="spaced-text">FOLLOWERS</p>
         <p class="green-text"><span><img src="images/icon-up.svg" alt="up arrow"></span>20 Today</p>
       </div>
-      <div class="youtube-info">
+      <div class="youtube-info card">
         <p><span><img src="images/icon-youtube.svg" alt="youtube icon"></span>@kometalks</p>
         <p class="dark-blue-text big-font">100</p>
         <p class="spaced-text">FOLLOWERS</p>
@@ -56,89 +56,89 @@
       </div>
     </div>
     <h2>Overview - Today</h2>
-    <div id="overview-section">
+    <div class="overview-section">
       <!-- facebook page overview section -->
-      <div class="inner-grid-container">
-        <div>
+      <div class="inner-grid-container card">
+        <div class="stat-block-two">
           <p>Page Views</p>
           <p class="dark-blue-text medium-font">400</p>
         </div>
-        <div class="social-icon-block">
+        <div class="stat-block-one">
           <p><img src="images/icon-facebook.svg" alt="facebook icon"></p>
           <p class="green-text"><span><img src="images/icon-up.svg" alt="up arrow"></span>102&percnt;</p>
         </div>
       </div>
-      <div class="inner-grid-container">
-        <div>
+      <div class="inner-grid-container card">
+        <div class="stat-block-two">
           <p>Likes</p>
           <p class="dark-blue-text medium-font">50</p>
         </div>
-        <div class="social-icon-block">
+        <div class="stat-block-one">
           <p><img src="images/icon-facebook.svg" alt="facebook icon"></p>
-          <p class="red-text"><span><img src="images/icon-down.svg" alt="up arrow"></span>2&percnt;</p>
+          <p class="red-text"><span></span><img src="images/icon-down.svg" alt="up arrow"></span>2&percnt;</p>
         </div>
       </div>
       <!-- Instagram page overview section -->
-      <div class="inner-grid-container">
-        <div>
+      <div class="inner-grid-container card">
+        <div class="stat-block-two">
           <p>Likes</p>
           <p class="dark-blue-text medium-font">3026</p>
         </div>
-        <div class="social-icon-block">
+        <div class="stat-block-one">
           <p><img src="images/icon-instagram.svg" alt="instagram icon"></p>
           <p class="green-text"><span><img src="images/icon-up.svg" alt="up arrow"></span>416&percnt;</p>
         </div>
       </div>
-      <div class="inner-grid-container">
-        <div>
+      <div class="inner-grid-container card">
+        <div class="stat-block-two">
           <p>Profile Views</p>
           <p class="dark-blue-text medium-font">10k</p>
         </div>
-        <div class="social-icon-block">
+        <div class="stat-block-one">
           <p><img src="images/icon-instagram.svg" alt="instagram icon"></p>
           <p class="green-text"><span><img src="images/icon-up.svg" alt="up arrow"></span>300&percnt;</p>
         </div>
       </div>
       <!-- Twitter page overview section -->
-      <div class="inner-grid-container">
-        <div>
+      <div class="inner-grid-container card">
+        <div class="stat-block-two">
           <p>Retweets</p>
           <p class="dark-blue-text medium-font">50</p>
         </div>
-        <div class="social-icon-block">
+        <div class="stat-block-one">
           <p><img src="images/icon-twitter.svg" alt="twitter icon"></p>
           <p class="green-text"><span><img src="images/icon-up.svg" alt="up arrow"></span>100&percnt;</p>
         </div>
       </div>
-      <div class="inner-grid-container">
-        <div>
+      <div class="inner-grid-container card">
+        <div class="stat-block-two">
           <p>Likes</p>
           <p class="dark-blue-text medium-font">200</p>
         </div>
-        <div class="social-icon-block">
+        <div class="stat-block-one">
           <p><img src="images/icon-twitter.svg" alt="twitter icon"></p>
           <p class="green-text"><span><img src="images/icon-up.svg" alt="up arrow"></span>300&percnt;</p>
         </div>
       </div>
       <!-- Youtube page overview section -->
-      <div class="inner-grid-container">
-        <div>
+      <div class="inner-grid-container card">
+        <div class="stat-block-two">
           <p>Likes</p>
           <p class="dark-blue-text medium-font">10</p>
         </div>
-        <div class="social-icon-block">
+        <div class="stat-block-one">
           <p><img src="images/icon-youtube.svg" alt="twitter icon"></p>
           <p class="red-text"><span><img src="images/icon-down.svg" alt="up arrow"></span>10&percnt;</p>
         </div>
       </div>
-      <div class="inner-grid-container">
-        <div>
+      <div class="inner-grid-container card">
+        <div class="stat-block-two">
           <p>Total Views</p>
           <p class="dark-blue-text medium-font">159</p>
         </div>
-        <div class="social-icon-block">
+        <div class="stat-block-one">
           <p><img src="images/icon-youtube.svg" alt="twitter icon"></p>
-          <p><span><img src="images/icon-down.svg" alt="up arrow"></span>2&percnt;</p>
+          <p class="red-text"><span><img src="images/icon-down.svg" alt="down arrow"></span>2&percnt;</p>
         </div>
       </div>
     </div>
@@ -149,7 +149,8 @@
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://github.com/Officialkome" target="_blank">Kome</a>.
     </footer>
-  </div>
+</div>
+<script src="main.js"></script>
 </body>
 
 </html>
