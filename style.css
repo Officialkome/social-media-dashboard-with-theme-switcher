@@ -32,12 +32,12 @@ body{
 .header-section div{
 padding-bottom: 30px;
 }
-.title-large{
-  padding-top: 20px;
+
+h1{
+  margin-bottom: -10px;
+  padding-top: 30px;
 }
-.title-large p{
-  margin-top: -15px;
-}
+
 /* Toggle switch styles */
 #toggleContainer{
   display: flex;
@@ -51,7 +51,7 @@ padding-bottom: 30px;
   display: inline-block;
   width: 50px;
   height: 25px;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 .switch input{
   opacity: 0;
@@ -182,10 +182,9 @@ footer {
 footer a { color: hsl(163, 72%, 41%); }
 
 /* Media Queries - desktop styles */
-@media (max-width:675px){
-.title-large{
-  display: inline-block;
-}
+@media (min-width: 375px) and (max-width:675px){
+h1{
+  font-size: 30px;
 }
 
 @media (min-width:675px) and (max-width:1440px){
@@ -200,7 +199,7 @@ footer a { color: hsl(163, 72%, 41%); }
     padding-top: 50px;
   }
   .switch{
-    margin-left: 20px;
+    margin-left: 10px;
   }
   hr{ 
     visibility: hidden;
