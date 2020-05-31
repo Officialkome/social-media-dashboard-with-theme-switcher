@@ -26,6 +26,9 @@ body{
   right: 10px;
   left: 10px;
 }
+/* .header-section{
+  position: relative;
+} */
 .header-section div{
 padding-bottom: 30px;
 }
@@ -179,8 +182,13 @@ footer {
 footer a { color: hsl(163, 72%, 41%); }
 
 /* Media Queries - desktop styles */
+@media (max-width:675px){
+.title-large{
+  display: inline-block;
+}
+}
 
-@media (min-width:700px) and (max-width:1440px){
+@media (min-width:675px) and (max-width:1440px){
   .container{
     left: 10%;
     right: 10%;
