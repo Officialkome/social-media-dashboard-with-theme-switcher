@@ -182,14 +182,15 @@ footer {
 footer a { color: hsl(163, 72%, 41%); }
 
 /* Media Queries - desktop styles */
-@media (min-width: 360px) and (max-width:675px){
+@media (max-width: 720px){
 h1{
   font-size: 28.5px;
 }
 .title-large p{
   font-size: 12px;
 }
-@media (min-width:675px) and (max-width:1440px){
+}
+@media (min-width:720px){
   .container{
     left: 10%;
     right: 10%;
